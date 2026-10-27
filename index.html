@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuantCollect — AI-Native Digital Collections</title>
+  <meta name="description" content="Empowering lenders to engage borrowers smarter, reduce manual effort and drive better collection outcomes.">
+  <link rel="icon" type="image/png" href="assets/logo-light.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- SVG symbol sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-blue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3aa0ff"/><stop offset="1" stop-color="#0a5ce0"/>
+      </linearGradient>
+      <linearGradient id="g-cyan" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#4fd2ff"/><stop offset="1" stop-color="#1590f5"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="currentColor"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m6.5 12.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-dblcheck" viewBox="0 0 28 16"><path d="m1.5 8.5 4.5 4.5L15 3.5M12 12l1 1 9.5-9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-robot" viewBox="0 0 64 48">
+      <rect x="9" y="12" width="32" height="24" rx="9" fill="#fff"/>
+      <rect x="14" y="17" width="22" height="14" rx="6" fill="#1561e6"/>
+      <circle cx="20.5" cy="23" r="2.6" fill="#fff"/><circle cx="29.5" cy="23" r="2.6" fill="#fff"/>
+      <path d="M21.5 27.5q3.5 2 7 0" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <rect x="23.5" y="5" width="3" height="7" rx="1.5" fill="#fff"/><circle cx="25" cy="4.5" r="3" fill="#fff"/>
+      <rect x="4" y="19" width="5" height="10" rx="2.5" fill="#fff"/><rect x="41" y="19" width="5" height="10" rx="2.5" fill="#fff"/>
+      <rect x="20" y="38" width="10" height="3" rx="1.5" fill="#fff" opacity=".8"/>
+      <path class="wave w1" d="M50 18q3 6 0 12" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path class="wave w2" d="M55 14q5 10 0 20" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path class="wave w3" d="M60 10q7 14 0 28" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-card" viewBox="0 0 64 48">
+      <rect x="2" y="4" width="60" height="40" rx="7" fill="url(#g-blue)"/>
+      <rect x="2" y="12" width="60" height="7" fill="#fff"/>
+      <rect x="10" y="27" width="14" height="4" rx="2" fill="#fff"/>
+      <rect x="10" y="34" width="9" height="4" rx="2" fill="#fff"/>
+      <circle cx="50" cy="32" r="5.5" fill="#fff"/><circle cx="50" cy="32" r="2.4" fill="#0a5ce0"/>
+    </symbol>
+    <symbol id="i-bars" viewBox="0 0 32 32">
+      <rect class="bar b1" x="2" y="20" width="7" height="10" rx="1.5" fill="url(#g-cyan)"/>
+      <rect class="bar b2" x="12.5" y="12" width="7" height="18" rx="1.5" fill="url(#g-blue)"/>
+      <rect class="bar b3" x="23" y="3" width="7" height="27" rx="1.5" fill="url(#g-blue)"/>
+    </symbol>
+    <symbol id="i-perf" viewBox="0 0 48 48">
+      <rect x="6" y="30" width="8" height="14" rx="1.5" fill="url(#g-blue)"/>
+      <rect x="18" y="22" width="8" height="22" rx="1.5" fill="url(#g-blue)"/>
+      <rect x="30" y="14" width="8" height="30" rx="1.5" fill="url(#g-blue)"/>
+      <path d="M6 24 20 12l6 5L40 4" stroke="url(#g-cyan)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M32 3h9v9" stroke="url(#g-cyan)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-rupee" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="url(#g-cyan)" stroke-width="4"/>
+      <path d="M17 15h14M17 21h14M17 27h4c6 0 6-12 0-12M21 27l9 8" fill="none" stroke="url(#g-cyan)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 48 48">
+      <circle cx="24" cy="13" r="7" fill="url(#g-cyan)"/>
+      <circle cx="10.5" cy="17" r="5" fill="url(#g-cyan)"/>
+      <circle cx="37.5" cy="17" r="5" fill="url(#g-cyan)"/>
+      <path d="M12 40c0-8 5.4-13 12-13s12 5 12 13z" fill="url(#g-cyan)"/>
+      <path d="M2 37c0-6 3.6-10 8.5-10 2 0 3.6.6 5 1.6A15 15 0 0 0 10 37z" fill="url(#g-cyan)"/>
+      <path d="M46 37c0-6-3.6-10-8.5-10-2 0-3.6.6-5 1.6A15 15 0 0 1 38 37z" fill="url(#g-cyan)"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 48 48">
+      <path d="M24 4 40 10v11c0 11-7 19-16 23C15 40 8 32 8 21V10z" fill="none" stroke="url(#g-cyan)" stroke-width="4" stroke-linejoin="round"/>
+      <path d="m17 24 5 5 9-10" fill="none" stroke="url(#g-cyan)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-bank" viewBox="0 0 48 48">
+      <path d="M24 4 44 14v4H4v-4z" fill="url(#g-blue)"/>
+      <rect x="8" y="21" width="5" height="16" rx="1" fill="url(#g-blue)"/>
+      <rect x="16.5" y="21" width="5" height="16" rx="1" fill="url(#g-blue)"/>
+      <rect x="26.5" y="21" width="5" height="16" rx="1" fill="url(#g-blue)"/>
+      <rect x="35" y="21" width="5" height="16" rx="1" fill="url(#g-blue)"/>
+      <rect x="4" y="39" width="40" height="5" rx="1.5" fill="url(#g-blue)"/>
+    </symbol>
+    <symbol id="i-coins" viewBox="0 0 48 48">
+      <g fill="url(#g-blue)">
+        <ellipse cx="30" cy="8" rx="13" ry="5"/>
+        <path d="M17 11.5v5c0 2.8 5.8 5 13 5s13-2.2 13-5v-5c-2.4 2.2-7.4 3.5-13 3.5s-10.6-1.3-13-3.5z"/>
+        <path d="M17 19.5v5c0 2.8 5.8 5 13 5s13-2.2 13-5v-5c-2.4 2.2-7.4 3.5-13 3.5s-10.6-1.3-13-3.5z"/>
+        <ellipse cx="17" cy="26" rx="13" ry="5"/>
+        <path d="M4 29.5v5c0 2.8 5.8 5 13 5s13-2.2 13-5v-5c-2.4 2.2-7.4 3.5-13 3.5S6.4 31.7 4 29.5z"/>
+        <path d="M4 37.5v3c0 2.8 5.8 5 13 5s13-2.2 13-5v-3c-2.4 2.2-7.4 3.5-13 3.5S6.4 39.7 4 37.5z"/>
+      </g>
+    </symbol>
+    <symbol id="i-mobile" viewBox="0 0 48 48">
+      <rect x="12" y="3" width="24" height="42" rx="5" fill="none" stroke="url(#g-blue)" stroke-width="3.5"/>
+      <rect x="20" y="37" width="8" height="3" rx="1.5" fill="url(#g-blue)"/>
+    </symbol>
+    <symbol id="i-sprout" viewBox="0 0 48 48">
+      <rect x="22" y="18" width="4" height="20" rx="2" fill="url(#g-blue)"/>
+      <path d="M24 24C24 14 18 8 8 8c0 10 6 16 16 16z" fill="url(#g-cyan)"/>
+      <path d="M24 20c0-9 5-14 14-14 0 9-5 14-14 14z" fill="url(#g-blue)"/>
+      <path d="M24 3c4 3 5 8 0 13-5-5-4-10 0-13z" fill="url(#g-blue)"/>
+      <path d="M14 36h20l-3 8H17z" fill="url(#g-blue)"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.7 4 6 4 9.5s-1.2 6.8-4 9.5c-2.8-2.7-4-6-4-9.5s1.2-6.8 4-9.5z"/></g></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="QuantCollect home">
+        <img src="assets/logo.png" alt="QuantCollect" width="461" height="308">
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span><span class="blob blob-2"></span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="hero-title">
+            <span class="line"><span class="line-inner">AI-NATIVE</span></span>
+            <span class="line accent"><span class="line-inner">DIGITAL</span></span>
+            <span class="line accent"><span class="line-inner">COLLECTIONS</span></span>
+          </h1>
+          <p class="hero-lead" data-reveal style="--d:.55s">
+            Empowering lenders to engage borrowers smarter, reduce manual effort and drive better collection outcomes.
+          </p>
+          <div data-reveal style="--d:.7s">
+            <!-- TODO: point href at the 2-minute approach video -->
+            <a href="#" class="btn btn-yellow btn-watch">
+              <span class="play-dot" aria-hidden="true"><svg><use href="#i-play"/></svg></span>
+              <span class="btn-label">Watch QuantCollect’s<br>Approach in 2 Minutes</span>
+              <svg class="chev" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal="zoom" style="--d:.2s">
+          <div class="scene">
+            <img class="scene-img" src="assets/hero-scene.webp" alt="A lender at her desk while a borrower’s phone shows a read WhatsApp reminder" width="632" height="498">
+            <div class="ov ov-msg">
+              <img src="assets/whatsapp.png" alt="" width="147" height="147">
+              <span class="ov-msg-text"><strong>Message Read</strong><span>10:02 AM</span></span>
+              <svg class="ticks" aria-hidden="true"><use href="#i-dblcheck"/></svg>
+            </div>
+            <div class="ov ov-call">
+              <span class="call-icon" aria-hidden="true">
+                <span class="ring"></span><span class="ring r2"></span>
+                <svg><use href="#i-phone"/></svg>
+              </span>
+              <strong>Agentic AI<br>Voice Call</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="journey-title" data-reveal>A connected, intelligent collection journey</h2>
+          <p data-reveal style="--d:.12s">
+            From digital engagement to AI-powered conversations and human expertise, QuantCollect determines the next best action - so every interaction moves towards a resolution.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+          <ol class="steps">
+            <li class="step" data-reveal style="--d:0s">
+              <div class="step-icon soft">
+                <span class="mini-phone" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
+                <img class="mini-wa" src="assets/whatsapp.png" alt="" width="147" height="147">
+              </div>
+              <h3><span class="num">1.</span> Digital Engagement</h3>
+              <p>WhatsApp &amp; SMS reminders</p>
+            </li>
+            <li class="step-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></li>
+            <li class="step" data-reveal style="--d:.12s">
+              <div class="step-icon solid">
+                <svg class="robot" aria-hidden="true"><use href="#i-robot"/></svg>
+              </div>
+              <h3><span class="num">2.</span> Agentic AI Conversation</h3>
+              <p>Agentic AI or agent call on engagement signals (e.g. read/click/double tick)</p>
+            </li>
+            <li class="step-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></li>
+            <li class="step" data-reveal style="--d:.24s">
+              <div class="step-icon photo">
+                <img src="assets/agent.webp" alt="Collection agent wearing a headset" width="124" height="124">
+              </div>
+              <h3><span class="num">3.</span> Human Expertise When Needed</h3>
+              <p>Complex cases, disputes or sensitive situations</p>
+            </li>
+            <li class="step-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></li>
+            <li class="step" data-reveal style="--d:.36s">
+              <div class="step-icon soft">
+                <svg class="card-ic" aria-hidden="true"><use href="#i-card"/></svg>
+              </div>
+              <h3><span class="num">4.</span> Payment &amp; Closure</h3>
+              <p>Easy payment options, PTP tracking and conciliation</p>
+            </li>
+          </ol>
+
+          <aside class="insight" data-reveal="right" style="--d:.3s" aria-labelledby="insight-title">
+            <div class="insight-head">
+              <h3 id="insight-title">Every interaction creates insight</h3>
+              <svg class="insight-bars" aria-hidden="true"><use href="#i-bars"/></svg>
+            </div>
+            <ul>
+              <li style="--i:0"><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Understand the reason</li>
+              <li style="--i:1"><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Identify the right action</li>
+              <li style="--i:2"><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Improve follow-through</li>
+              <li style="--i:3"><span class="tick" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Drive better outcomes</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPACT ============ -->
+    <section class="impact" aria-labelledby="impact-title">
+      <div class="impact-shapes" aria-hidden="true"><span></span><span></span></div>
+      <div class="container impact-grid">
+        <div class="impact-copy">
+          <h2 id="impact-title" data-reveal>Designed for<br>measurable impact</h2>
+          <ul class="metrics">
+            <li data-reveal style="--d:0s"><svg aria-hidden="true"><use href="#i-perf"/></svg><span>Performance Enhancement</span><i aria-hidden="true"></i></li>
+            <li data-reveal style="--d:.1s"><svg aria-hidden="true"><use href="#i-rupee"/></svg><span>Effective Resolution</span><i aria-hidden="true"></i></li>
+            <li data-reveal style="--d:.2s"><svg aria-hidden="true"><use href="#i-users"/></svg><span>Optimum Collection Costs</span><i aria-hidden="true"></i></li>
+            <li data-reveal style="--d:.3s"><svg aria-hidden="true"><use href="#i-shield"/></svg><span>Improved Borrower Experience</span><i aria-hidden="true"></i></li>
+          </ul>
+        </div>
+
+        <div class="impact-visual" data-reveal="right" style="--d:.15s">
+          <div class="borrower">
+            <img src="assets/borrower.webp" alt="Borrower checking a payment confirmation on his phone" width="396" height="266" loading="lazy">
+            <ul class="status" aria-label="Collection status">
+              <li class="s-1"><span class="sc" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Payment Successful</li>
+              <li class="s-2"><span class="sc" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Promise to Pay</li>
+              <li class="s-3"><span class="sc" aria-hidden="true"><svg><use href="#i-check"/></svg></span>Case Resolved</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LENDERS + CTA ============ -->
+    <section class="lenders-wrap" aria-labelledby="lenders-title">
+      <div class="container">
+        <div class="lenders-card" data-reveal>
+          <div class="lenders">
+            <h2 id="lenders-title">Built for lenders</h2>
+            <ul class="lender-list">
+              <li style="--i:0"><svg aria-hidden="true"><use href="#i-bank"/></svg>Banks</li>
+              <li style="--i:1"><svg aria-hidden="true"><use href="#i-coins"/></svg>NBFCs</li>
+              <li style="--i:2"><svg aria-hidden="true"><use href="#i-mobile"/></svg>Fintechs</li>
+              <li style="--i:3"><svg aria-hidden="true"><use href="#i-users"/></svg>Digital Lenders</li>
+              <li style="--i:4"><svg aria-hidden="true"><use href="#i-sprout"/></svg>Microfinance</li>
+            </ul>
+          </div>
+          <div class="cta">
+            <p class="cta-text">Let’s explore how QuantCollect can drive better outcomes for your collection operations.</p>
+            <a href="mailto:company@qcollect.ai?subject=Request%20a%20Demo" class="btn btn-yellow btn-demo">
+              Request a Demo <svg class="chev" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img class="footer-logo" src="assets/logo-light.png" alt="QuantCollect" width="308" height="205" loading="lazy">
+      <div class="contacts">
+        <a href="mailto:company@qcollect.ai"><svg aria-hidden="true"><use href="#i-mail"/></svg>company@qcollect.ai</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="https://www.qcollect.ai" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-globe"/></svg>www.qcollect.ai</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
